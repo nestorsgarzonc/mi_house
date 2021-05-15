@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomModals {
   Future<void> showError({
     required String message,
-    String title = 'Oops ha ocurrido un error\nHa esta página le ha dado amsiedad',
+    String title = 'Oops ha ocurrido un error.\nHa esta página le ha dado\namsiedad',
     VoidCallback? onPressed,
     VoidCallback? confirmButtonAction,
     required BuildContext context,
@@ -11,15 +11,22 @@ class CustomModals {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
+        contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               'assets/images/ilustrations/ansiedad.png',
-              width: 150,
-              height: 128,
+              width: 120,
+              height: 98,
             ),
             const Text(' '),
-            Text(title)
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 10,
+              ),
+            ),
           ],
         ),
         content: Text(message),
@@ -61,8 +68,8 @@ class CustomModals {
           children: [
             Image.asset(
               'assets/images/ilustrations/noansiedad.png',
-              width: 128,
-              height: 150,
+              width: 118,
+              height: 140,
             ),
             Text(title),
           ],
