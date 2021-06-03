@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mi_house/core/modals/modals.dart';
 import 'package:mi_house/core/validators/text_validators.dart';
-import 'package:mi_house/core/widgets/buttons/social_network_icon_button.dart';
 import 'package:mi_house/features/auth/auth_provider.dart';
 import 'package:mi_house/features/auth/models/login_model.dart';
+import 'package:mi_house/widgets/buttons/social_network_icon_button.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -37,7 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: size.height * 0.3,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: ExactAssetImage('assets/images/login/backmihousee.png'),
+                    image:
+                        ExactAssetImage('assets/images/login/backmihousee.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -82,7 +83,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           '¡Hola!',
                           style: TextStyle(
-                              fontSize: 50.0, color: Colors.white, fontWeight: FontWeight.bold),
+                              fontSize: 50.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -92,7 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           'Inicia sesion en Mi house',
                           style: TextStyle(
-                              fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+                              fontSize: 20.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         )
                       ],
                     ),
@@ -135,7 +140,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         prefixIcon: const Icon(Icons.lock, color: Colors.white),
                         suffixIcon: IconButton(
                             icon: Icon(
-                              _isObscure ? Icons.visibility : Icons.visibility_off,
+                              _isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
                               color: Colors.white,
                             ),
                             onPressed: () {
@@ -155,12 +162,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       onPressed: handleOnLogin,
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 15.0),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 60.0, vertical: 15.0),
                         child: isLoading
                             ? const Center(child: CircularProgressIndicator())
                             : Text(
                                 'Iniciar Sesion',
-                                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold),
                               ),
                       ),
                     ),
@@ -168,7 +178,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {},
                       child: Text(
                         '¿Olvidaste tu contraseña?',
-                        style: TextStyle(color: Theme.of(context).scaffoldBackgroundColor),
+                        style: TextStyle(
+                            color: Theme.of(context).scaffoldBackgroundColor),
                       ),
                     ),
                   ],
